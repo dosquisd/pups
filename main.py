@@ -39,6 +39,8 @@ def start() -> tuple[str, str]:
             case _:
                 print('Invalid input')
 
+        print('\n\n')
+
     return rol, id_student
 
 
@@ -67,6 +69,8 @@ def student_full_menu(pusp: Pusp, student_id: str) -> None:
 
             case _:
                 print('Invalid input')
+
+        print('\n\n')
 
 
 def admin(pusp: Pusp) -> None:
@@ -99,10 +103,15 @@ def admin(pusp: Pusp) -> None:
                 administrator.remove_resource(pusp.inventory, resource_id)
 
             case 3:
+                pusp.reports()
+
+            case 4:
                 break
 
             case _:
                 print('Invalid input')
+
+        print('\n\n')
 
 
 def main() -> None:
